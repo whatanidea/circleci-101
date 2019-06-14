@@ -1,7 +1,7 @@
 {
-  "name": "gcloud-deploy-node-app-ci-ci-circleci",
+  "name": "cloud-deploy-node-app-ci-ci-circleci",
   "version": "1.0.0",
-  "description": "Tutorial leading to a deployment of a simple Node.js app to gcloud",
+  "description": "Tutorial leading to a deployment of a simple Node.js app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
