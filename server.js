@@ -23,7 +23,7 @@ app.listen(port, (err) => {
   if (err) {
     console.log(err);
   } else {
-    console.log(`App at: http://localhost:${port}`);
+    console.log(`App at: https://ec2-18-191-19-109.us-east-2.compute.amazonaws.com:${port}`);
   }
 });
 module.exports = app;
