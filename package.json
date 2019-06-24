@@ -1,26 +1,38 @@
 {
-  "name": "cloud-deploy-node-app-ci-ci-circleci",
+  "name": "loopback-getting-started",
   "version": "1.0.0",
-  "description": "Tutorial leading to a deployment of a simple Node.js app",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "mocha"
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=6"
   },
-  "keywords": [
-    "gcloud",
-    "node"
-  ],
-  "author": "Collins",
-  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint"
+  },
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "morgan": "^1.8.2"
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "helmet": "^3.18.0",
+    "loopback": "^3.25.1",
+    "loopback-boot": "^3.3.0",
+    "loopback-component-explorer": "^6.4.0",
+    "loopback-connector-mysql": "^5.4.0",
+    "serve-favicon": "^2.5.0",
+    "strong-error-handler": "^3.2.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
-    "request": "^2.88.0"
-  }
+    "eslint": "^5.16.0",
+    "eslint-config-loopback": "^13.1.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "bugs": {
+    "url": "https://github.com/strongloop/loopback-getting-started/issues"
+  },
+  "license": "UNLICENSED",
+  "description": "loopback-getting-started",
+  "author": "IBM Corp."
 }
