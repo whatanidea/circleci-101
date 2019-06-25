@@ -1,5 +1,2 @@
-FROM node:slim
-ADD . /app
-WORKDIR /app
-RUN npm install
-RUN npm start
+FROM nginx:alpine
+COPY . /user/share/nginx/html
