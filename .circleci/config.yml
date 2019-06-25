@@ -2,9 +2,10 @@ version: 2
 jobs:
     build:
     docker:
-      - image: golang:1.6.4-jessie
+      - image: nginx:alpine
         steps:
         - checkout  
+        - run : echo "hellp world"
         - run: |
           docker build -f .
           docker login https://cloud.docker.com/repository/docker/fhdockerlab/ -u fhdockerlab -p Fasank12!23
