@@ -6,8 +6,6 @@ jobs:
         - run:
           name: docker-image
           command: |
-          TAG=latest
-          IMAGE=application_name
           docker build -f .
           docker login https://cloud.docker.com/repository/docker/fhdockerlab/ -u fhdockerlab -p Fasank12!23
           docker tag simple-html:v1 fhdockerlab/simple-html:v2
