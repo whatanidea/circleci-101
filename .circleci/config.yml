@@ -1,15 +1,21 @@
 version: 2
 jobs:
-  build:
-    docker: # use the docker executor type; machine and macos executors are also supported
-      - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
-    steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello malte" # run the `echo` command
-  
+    docker-image:
+      steps:
+        - checkout
+        - run:
+          name: docker-image
+          command: |
+          TAG=latest
+          IMAGE=application_name
+          docker build -f .
+          docker login https://cloud.docker.com/repository/docker/fhdockerlab/ -u fhdockerlab -p Fasank12!23
+          docker tag simple-html:v1 fhdockerlab/simple-html:v2
+          docker push fhdockerlab/simple-html:v2
+
 workflows:
   version: 2
-  build_and_test:
+  build:
     jobs:
-      - build
+      - docker-image
                      
