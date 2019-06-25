@@ -1,8 +1,10 @@
 version: 2
 jobs:
-    docker-image:
-      steps:
-        - checkout
+    build:
+    docker:
+      - image: golang:1.6.4-jessie
+        steps:
+        - checkout  
         - run: |
           docker build -f .
           docker login https://cloud.docker.com/repository/docker/fhdockerlab/ -u fhdockerlab -p Fasank12!23
@@ -13,5 +15,5 @@ workflows:
   version: 2
   build:
     jobs:
-      - docker-image
+      - build
                      
