@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/repo
     docker: # use the docker executor type; machine and macos executors are also supported
-      - image: nginx/alpine # the primary container, where your job's commands are run
+      - image: ngnix:alpine # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
       - run:
@@ -20,13 +20,11 @@ jobs:
       - run:
           name: Push application Docker image
           command: |
-          TAG=v1
-          IMAGE=nginx/alpine:v1
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
 
             docker login $DOCKER_REGISTRY -u $DOCKER_REGISTRY_USER -p $DOCKER_REGISTRY_PASSWORD
-            docker tag $IMAGE:$TAG $DOCKER_REGISTRY/$IMAGE:$TAG
-            docker push $DOCKER_REGISTRY/$IMAGE:$TAG
+            docker tag fhdockerlab/simple-html fhdockerlab/simple-html:v2
+            docker push fhdockerlab/simple-html:v2
             fi
 
 workflows:
