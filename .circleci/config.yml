@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/repo
     docker: # use the docker executor type; machine and macos executors are also supported
-      - image: ngnix:alpine # the primary container, where your job's commands are run
+      - image: ngnix # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
       - run:
