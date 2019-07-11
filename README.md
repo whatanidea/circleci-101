@@ -8,4 +8,4 @@ See [Getting started with LoopBack](http://loopback.io/doc/en/lb3/Getting-starte
 
 ---
 
-[More LoopBack examples](https://loopback.io/doc/en/lb3/Tutorials-and-examples.html)
+[More LoopBack examples](https://loopback.io/doc/en/lb3/Tutorials-and-examples.html) hello
